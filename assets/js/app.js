@@ -10,24 +10,42 @@ for (let i = 0; i < 3; i++) {
 
     }
     
-    if (accion=='comprar'){
-        let compra=prompt('Que desea comprar? \n Herramientas \n Comida \n Ropa').toLowerCase();
-        switch(compra){
-            case 'herramientas': 
-                alert('Espero que puedas arreglar lo que rompiste');
-                break;
-                
-            case 'comida': 
-                alert('al fin pagaste la cena');
-                break;
-    
-            case 'ropa': 
-                alert('Abrigate que se viene el frío');
-                break;
+    if (accion == "comprar") {
+      let compra = prompt(
+        "Que desea comprar? \n Herramientas \n Comida \n Ropa"
+      ).toLowerCase();
+      switch (compra) {
+        case "herramientas":
+          alert("Espero que puedas arreglar lo que rompiste");
+          break;
 
-            default:
-                alert('Elegí bien, vago')
-        }
+        case "comida":
+          alert("al fin pagaste la cena");
+          break;
+
+        case "ropa":
+          alert("Abrigate que se viene el frío");
+          break;
+
+        default:
+          alert("Elegí bien, vago");
+      }
     }
     
 }
+
+function compra() {
+  let satisfacción = prompt("Estás satisfecho con la compra?").toLowerCase();
+  if (
+    satisfacción == "si" ||
+    satisfacción == "SI" ||
+    satisfacción == "SÍ" ||
+    satisfacción == "sí"
+  ) {
+    alert("Me Alegro!! Espero verte de nuevo");
+  } else {
+    alert("En que podemos mejorar? Gracias por su devolución");
+  }
+}
+
+compra();
